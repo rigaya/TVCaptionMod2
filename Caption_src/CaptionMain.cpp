@@ -159,6 +159,11 @@ DWORD CCaptionMain::AddTSPacket(BYTE* pbPacket)
 	return dwRet;
 }
 
+DWORD CCaptionMain::AddPESPacket(LPCBYTE pbBuff, DWORD dwSize)
+{
+	return ParseCaption(pbBuff, dwSize);
+}
+
 DWORD CCaptionMain::ParseListData()
 {
 	//まずバッファを作る

@@ -10,6 +10,7 @@ public:
 	~CCaptionMain(void);
 
 	DWORD AddTSPacket(BYTE* pbPacket);
+	DWORD AddPESPacket(LPCBYTE pbBuff, DWORD dwSize);
 	DWORD Clear();
 
 	DWORD GetTagInfo(LANG_TAG_INFO_DLL** ppList, DWORD* pdwListCount);

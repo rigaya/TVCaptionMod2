@@ -112,6 +112,14 @@ DWORD WINAPI AddTSPacketCP(BYTE* pbPacket)
 	return g_sys->AddTSPacket(pbPacket);
 }
 
+DWORD WINAPI AddPESPacketCP(BYTE* pbBuff, DWORD dwSize)
+{
+	if (g_sys == NULL){
+		return CP_ERR_NOT_INIT;
+	}
+	return g_sys->AddPESPacket(pbBuff, dwSize);
+}
+
 DWORD WINAPI ClearCP()
 {
 	if( g_sys == NULL ){

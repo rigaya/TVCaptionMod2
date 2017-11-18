@@ -50,6 +50,11 @@ DWORD WINAPI UnInitializeCP();
 CAPTION_DLLEXPORT
 DWORD WINAPI AddTSPacketCP(BYTE* pbPacket);
 
+// PES1パケット
+// 戻り値はAddTSPacketCPと同じ
+CAPTION_DLLEXPORT
+DWORD WINAPI AddPESPacketCP(BYTE* pbBuff, DWORD dwSize);
+
 //内部データクリア
 //戻り値：エラーコード
 //ERR_NOT_INIT:初期化されていない, 0:クリアした
