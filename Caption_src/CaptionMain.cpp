@@ -1,4 +1,4 @@
-﻿#include <Windows.h>
+﻿#include "rgy_osdep.h"
 #include "CaptionDef.h"
 #include "ARIB8CharDecode.h"
 #include "CaptionMain.h"
@@ -259,7 +259,7 @@ DWORD CCaptionMain::ParseCaption(LPCBYTE pbBuff, DWORD dwSize)
 		if( dwRet == TRUE ){
 			dwRet = CP_NO_ERR_CAPTION_1 + ucID - 1;
 		}else{
-			::OutputDebugString(TEXT(__FUNCTION__) TEXT("(): Unsupported Caption Data!\n"));
+			::OutputDebugString(TEXT("Unsupported Caption Data!\n"));
 			m_CaptionList[ucID].clear();
 			m_DRCList[ucID].clear();
 			m_DRCMap[ucID].Clear();
@@ -416,7 +416,7 @@ DWORD CCaptionMain::ParseUnitData(LPCBYTE pbBuff, DWORD dwSize, DWORD* pdwReadSi
 			//DRCS処理
 			if( uiUnitSize > 0 ){
 				if( CARIB8CharDecode::DRCSHeaderparse(pbBuff+5, uiUnitSize, pDRCList, pbBuff[1]==0x31?TRUE:FALSE ) == FALSE ){
-					::OutputDebugString(TEXT(__FUNCTION__) TEXT("(): Unsupported DRCS!\n"));
+					::OutputDebugString(TEXT("Unsupported DRCS!\n"));
 					//return FALSE;
 				}
 			}

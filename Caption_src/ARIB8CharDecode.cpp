@@ -1,4 +1,4 @@
-﻿#include <Windows.h>
+﻿#include "rgy_osdep.h"
 #include "CaptionDef.h"
 #include "ARIB8CharDecode.h"
 
