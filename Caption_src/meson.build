@@ -11,7 +11,7 @@ caption_include_dirs = [
 ]
 
 # プラットフォーム固有の定義
-caption_cpp_args = cpp_args
+caption_cpp_args = cpp_args_cp932
 if host_machine.system() != 'windows'
   # Linuxビルド時にはプリプロセッサでヘッダーファイルを含める前にpltform_compat.hを含めるよう指示
   caption_cpp_args += ['-include', meson.current_source_dir() + '/platform_compat.h']
