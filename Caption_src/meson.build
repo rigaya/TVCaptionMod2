@@ -21,6 +21,7 @@ caption_lib = static_library('caption',
   caption_sources,
   include_directories : caption_include_dirs,
   cpp_args : caption_cpp_args,
+  pic : true,
   install : false,
 )
 
