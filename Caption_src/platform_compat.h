@@ -19,7 +19,7 @@
   static inline int MultiByteToWideChar(int codePage, DWORD flags, LPCSTR lpMultiByteStr, int cbMultiByte, LPWSTR lpWideCharStr, int cchWideChar) {
     std::wstring wstr = char_to_wstring(lpMultiByteStr, codePage);
     wcscpy(lpWideCharStr, wstr.c_str());
-    return wstr.length();
+    return wstr.length() * sizeof(wchar_t); // バイト数を返す
   }
 
   static inline void OutputDebugString(LPCSTR lpOutputString) {
