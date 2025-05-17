@@ -3,6 +3,10 @@
 //運用規定により2言語まで
 #define LANG_TAG_MAX 2
 
+#ifndef LPCBYTE
+typedef const BYTE* LPCBYTE;
+#endif
+
 class CCaptionMain
 {
 public:
